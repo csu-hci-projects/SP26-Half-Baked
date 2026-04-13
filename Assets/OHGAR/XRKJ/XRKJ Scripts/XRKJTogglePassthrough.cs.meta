@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 80f204a3419a58e4cb68a88944afe31c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 296224
+  packageName: XRKJ (XR Kinematic Joystick)
+  packageVersion: 1.0
+  assetPath: Assets/OHGAR/XRKJ/XRKJ Scripts/XRKJTogglePassthrough.cs
+  uploadId: 707529

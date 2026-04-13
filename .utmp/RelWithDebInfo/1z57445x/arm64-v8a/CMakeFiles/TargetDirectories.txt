@@ -1,0 +1,5 @@
+C:/Users/Morga/Documents/Unity Projects/VR Claw Game/.utmp/RelWithDebInfo/1z57445x/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Morga/Documents/Unity Projects/VR Claw Game/.utmp/RelWithDebInfo/1z57445x/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/Morga/Documents/Unity Projects/VR Claw Game/.utmp/RelWithDebInfo/1z57445x/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/Morga/Documents/Unity Projects/VR Claw Game/.utmp/RelWithDebInfo/1z57445x/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/Morga/Documents/Unity Projects/VR Claw Game/.utmp/RelWithDebInfo/1z57445x/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

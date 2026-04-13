@@ -4,15 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Ingredient
-  - Cooking_Status_Object
-  - Ingredient_Base
-  - Drop Region
-  - Global Records
-  - Ingredient_Cap
-  - Coffee_Pour
-  - Coffee_Pot
-  - Coffee_Cup
+  - Anchor
+  - Collectable
   layers:
   - Default
   - TransparentFX
@@ -45,7 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - Spatial Awareness
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -59,5 +52,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  m_MigratedRenderPipelines:
-  - UnityEngine.Rendering.Universal.UniversalRenderPipeline
