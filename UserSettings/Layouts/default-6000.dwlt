@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,8 +121,8 @@ MonoBehaviour:
     y: 0
     width: 320
     height: 886
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -345,7 +345,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -7978
+  m_LastSelectedObjectID: 74684
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -441,15 +441,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: 74
-  m_LastProjectPath: C:\Users\Morga\Documents\Unity Projects\VR Claw Game
+  m_LastProjectPath: C:\Users\Morga\Documents\Unity Projects\SP26-Half-Baked
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9ec90000
-    m_LastClickedID: 51614
-    m_ExpandedIDs: 000000009ec90000a0c90000a2c90000a4c9000000ca9a3b
+    m_SelectedIDs: acc90000
+    m_LastClickedID: 51628
+    m_ExpandedIDs: 00000000acc90000aec90000b0c90000b2c9000028ca0000ee010100f001010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -478,7 +478,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009ec90000a0c90000a2c90000a4c90000
+    m_ExpandedIDs: 00000000acc90000aec90000b0c90000b2c90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -624,9 +624,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7ab9ffff92b9ffff8cc0ffff36ceffff4eceffff48d5ffffb6ebffffceebffffc8f2ffff18fbffffbec200000cc3000016c30000ecdc000056dd0000
+      m_SelectedIDs: 602b0100
+      m_LastClickedID: 76640
+      m_ExpandedIDs: be76feffd676fefff27dfeff1890feff3090feff4c97feff9abbfeffb2bbfeffcec2feff6e09ffff8609ffffa210ffff92a9ffffaaa9ffffa4b0ffff14e8ffff2ce8ffff2aefffff18fbffff2edc00002ede0000e4f40000e4f600009c090100060a0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1248,9 +1248,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4.5122457, y: -1.4870201, z: 5.4944525}
+    m_Target: {x: 2.5602763, y: 1.5835791, z: 8.518649}
     speed: 2
-    m_Value: {x: 4.5122457, y: -1.4870201, z: 5.4944525}
+    m_Value: {x: 2.5602763, y: 1.5835791, z: 8.518649}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1296,13 +1296,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.1712762, y: -0.332277, z: 0.061496045, w: -0.9254652}
+    m_Target: {x: 0.040247783, y: -0.10889812, z: -0.0044128955, w: -0.99323654}
     speed: 2
-    m_Value: {x: -0.17127524, y: -0.33227515, z: 0.061495703, w: -0.92546004}
+    m_Value: {x: 0.040247444, y: -0.108897194, z: -0.0044128583, w: -0.99322814}
   m_Size:
-    m_Target: 3.5125153
+    m_Target: 4.2100935
     speed: 2
-    m_Value: 3.5125153
+    m_Value: 4.2100935
   m_Ortho:
     m_Target: 0
     speed: 2

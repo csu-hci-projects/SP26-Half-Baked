@@ -1,6 +1,8 @@
 using System.Runtime.Serialization.Json;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class ExperimentController : MonoBehaviour
 {
@@ -16,9 +18,18 @@ public class ExperimentController : MonoBehaviour
 
     private bool roundInProgress;
 
+    public Volume volume;
+    public float focusDistanceNearsighted = 1.0f;
+    public float focusDistanceFarsighted = 3.5f;
+
+    private DepthOfField dof;
+    private int condition = 0;
+    public int enabledFocalLength = 32;
+    public int disabledFocalLength = 1;
+
     public void Start()
     {
-        
+        volume.profile.TryGet<DepthOfField>(out dof);
     }
 
     public void Update()
@@ -39,10 +50,38 @@ public class ExperimentController : MonoBehaviour
 
     public void StartRound()
     {
+        // clean up
+        spawner.ClearBalls();
+        roundPoints = 0;
+
         spawner.SpawnRound();
         currentRound++;
         roundTimeLeft = roundLength;
         roundInProgress = true;
+    }
+
+    private void SetCondition(int c)
+    {
+        condition = c;
+        if (condition == 0)
+        {
+            dof.focalLength.value = disabledFocalLength;
+        }
+        else if (condition == 1)
+        {
+            dof.focalLength.value = enabledFocalLength;
+            dof.focusDistance.value = focusDistanceNearsighted;
+        }
+        else if (condition == 2)
+        {
+            dof.focalLength.value = enabledFocalLength;
+            dof.focusDistance.value = focusDistanceFarsighted;
+        }
+    }
+
+    public void NextCondition()
+    {
+        SetCondition((condition + 1) % 3);
     }
 
     public void EndRound()
@@ -54,6 +93,9 @@ public class ExperimentController : MonoBehaviour
 
     public void AddPoint()
     {
-        roundPoints++;
+        if (roundTimeLeft > 0)
+        {
+            roundPoints++;
+        }
     }
 }
