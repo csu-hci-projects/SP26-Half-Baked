@@ -1,4 +1,6 @@
-using System.Runtime.Serialization.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -27,9 +29,14 @@ public class ExperimentController : MonoBehaviour
     public int enabledFocalLength = 32;
     public int disabledFocalLength = 1;
 
+    private float lastCollectionTime = 0;
+    private List<string> lines;
+
     public void Start()
     {
         volume.profile.TryGet<DepthOfField>(out dof);
+        lines = new List<string>();
+        lines.Add("Round,Condition,Interim,Bucket");
     }
 
     public void Update()
@@ -48,7 +55,20 @@ public class ExperimentController : MonoBehaviour
         }
     }
 
-    public void StartRound()
+    public void ResetExperiment()
+    {
+        // clean up
+        spawner.ClearBalls();
+        roundPoints = 0;
+
+        currentRound = 0;
+        SetCondition(0);
+
+        lines = new List<string>();
+        lines.Add("Round,Condition,Interim,Bucket");
+    }
+
+    public void NextRound()
     {
         // clean up
         spawner.ClearBalls();
@@ -58,9 +78,10 @@ public class ExperimentController : MonoBehaviour
         currentRound++;
         roundTimeLeft = roundLength;
         roundInProgress = true;
+        lastCollectionTime = Time.time;
     }
 
-    private void SetCondition(int c)
+    public void SetCondition(int c)
     {
         condition = c;
         if (condition == 0)
@@ -89,6 +110,11 @@ public class ExperimentController : MonoBehaviour
         roundTimeLeft = 0;
         roundInProgress = false;
         spawner.ClearBalls();
+
+        if(currentRound == 3)
+        {
+            ExportData();
+        }
     }
 
     public void AddPoint()
@@ -96,6 +122,30 @@ public class ExperimentController : MonoBehaviour
         if (roundTimeLeft > 0)
         {
             roundPoints++;
+            if(spawner.GetBallsLeft() <= 5)
+            {
+                spawner.SpawnRound();
+            }
+        }
+    }
+
+    public void DropEnded()
+    {
+        int bucket = spawner.GetBallsInThisCollection();
+        float interim = Time.time - lastCollectionTime;
+        lastCollectionTime = Time.time;
+        lines.Add(currentRound + "," + condition + "," + interim + "," + bucket);
+    }
+
+    public void ExportData()
+    {
+        DateTime dt = DateTime.Now;
+        using (StreamWriter outputFile = new StreamWriter(Application.persistentDataPath + "/" + dt.ToString("yyyy-MM-dd\\THH:mm:ss\\Z") + ".csv"))
+        {
+            foreach (string line in lines)
+            {
+                outputFile.WriteLine(line);
+            }
         }
     }
 }

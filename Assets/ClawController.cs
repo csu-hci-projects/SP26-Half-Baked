@@ -22,6 +22,8 @@ public class ClawController : MonoBehaviour
     Vector3 _initPos;
     Quaternion _initRot;
 
+    public ExperimentController controller;
+
     private void Start()
     {
         _initPos = transform.position;
@@ -66,6 +68,7 @@ public class ClawController : MonoBehaviour
                 transform.localPosition = new Vector3(transform.localPosition.x, _defaultY, transform.localPosition.z);
                 _isLifting = false;
                 _isDropping = false;
+                OnDropEnded();
             }
         }
     }
@@ -102,5 +105,10 @@ public class ClawController : MonoBehaviour
             _isLifting = false;
             _t = 0.0f;
         }
+    }
+
+    public void OnDropEnded()
+    {
+        controller.DropEnded();
     }
 }

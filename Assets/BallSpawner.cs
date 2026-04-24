@@ -10,6 +10,7 @@ public class BallSpawner : MonoBehaviour
 
     private int currentBallCount = 0;
 
+    private int ballsInThisCollection = 0;
     private void SpawnNewBall()
     {
         GameObject newBall = Instantiate(ballPrefab);
@@ -56,5 +57,18 @@ public class BallSpawner : MonoBehaviour
     {
         currentBallCount--;
         controller.AddPoint();
+        ballsInThisCollection++;
+    }
+
+    public int GetBallsInThisCollection()
+    {
+        int val = ballsInThisCollection;
+        ballsInThisCollection = 0;
+        return val;
+    }
+
+    public int GetBallsLeft()
+    {
+        return currentBallCount;
     }
 }
