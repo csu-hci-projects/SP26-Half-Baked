@@ -6,6 +6,11 @@
 [Video depicting the current state of the project]() \
 [Video analyzing the current stat of the code]()
 
+# Final Version
+[High-level overview of the project]() \
+[Presentation video]() \
+[Programming video and process breakdown]()
+
 # Paper links
 ![Link to the current LaTeX file of the paper](https://www.overleaf.com/8237629596phszjtqzgmqd#ed95de) \
 ![Alternative link to read the paper](https://www.overleaf.com/read/sgffpsvdnnqr#a2acce)
